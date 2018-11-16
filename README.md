@@ -28,4 +28,16 @@ Deploy the script
 
 Check the AWS console. A lambda function should be deployed.
 
+## STEP 2 - Route the Lambda Function to API Gateway
 
+###### 2.1 update the CloudFormation template
+
+Update **template.yaml** and enable the lambda resource to use an Api event. You don't have to add an API Gateway resource. SAM is smart enough to know that an API Gateway is needed if you specify that the lambda function has an API endpoint.
+
+###### 2.2 re-deploy the CloudFormation stack
+
+```
+./deploy.sh
+```
+
+Check and test API Gateway from AWS console. To view the API from the given endpoint, you have to enable CORS.
