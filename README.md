@@ -41,3 +41,18 @@ Update **template.yaml** and enable the lambda resource to use an Api event. You
 ```
 
 Check and test API Gateway from AWS console. To view the API from the given endpoint, you have to enable CORS.
+
+## STEP 3 - Create a DynamoDB table 
+
+###### 3.1 update the CloudFormation template
+
+Update **template.yaml** and create a new SimpleTable type resource. Specify the primary key and read/ write capacity unit.
+
+###### 3.2 re-deploy the CloudFormation stack
+
+```
+./deploy.sh
+```
+
+Check the DynamoDB table from AWS console. 
+
