@@ -9,18 +9,22 @@ Resources:
     Properties:
       FunctionName: HelloLambda
       Handler: index.lambda_handler
-      Runtime: python3.6
+      Runtime: python2.7 
       CodeUri: src 
       MemorySize: 128 
       Timeout: 30
       Policies:
         - AWSLambdaBasicExecutionRole
+        - AmazonDynamoDBFullAccess  
       Events:
         MyEndpoint:
-          Type: Api
+          Type: Api 
           Properties:
             Path: /test
             Method: get
+      Environment:
+        Variables:
+          DB_TABLE_NAME: !Ref HelloTable
 
   HelloTable:
     Type: AWS::Serverless::SimpleTable

@@ -56,3 +56,12 @@ Update **template.yaml** and create a new SimpleTable type resource. Specify the
 
 Check the DynamoDB table from AWS console. 
 
+## STEP 4 - Route the DynamoDB table to lambda function
+
+###### 4.1 update the CloudFormation template
+
+Update **template.yaml**. Assign AmazonDynamoDBFullAccessRole to the lambda function. Assign the environment variables using the Ref intrinsic function.
+
+###### 4.2 update lambda function
+
+Update **src/index.py**. Scan the dynamoDB table using Boto3 and have the output return a boto3 resource.
