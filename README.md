@@ -65,3 +65,28 @@ Update **template.yaml**. Assign AmazonDynamoDBFullAccessRole to the lambda func
 ###### 4.2 update lambda function
 
 Update **src/index.py**. Scan the dynamoDB table using Boto3 and have the output return a boto3 resource.
+
+###### 4.3 re-deploy the CloudFormation stack
+
+```
+./deploy.sh
+```
+
+## STEP 5 - Create Development Stage Variables
+
+###### 5.1 Add stage variable in the shell script
+
+Update **deploy.sh**. Add the stage variable and override the environment variable in the cloudformation deployment command.
+
+###### 5.2 Add Parameter in the CloudFormation file
+
+Add parameter in **template.yaml** and update the lambda function name accordingly.
+
+###### 5.3 re-deploy the CloudFormation stack
+
+```
+./deploy.sh
+```
+
+Check if the CloudFormation stack is updated.
+
