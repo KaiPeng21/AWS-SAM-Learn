@@ -90,3 +90,16 @@ Add parameter in **template.yaml** and update the lambda function name according
 
 Check if the CloudFormation stack is updated.
 
+## STEP 6 - Update CloudFormation for API Gateway Swagger
+
+###### 6.1 Add an APIGateway Resource in CloudFormation
+
+Add an APIGateway resource in **template.yaml**. Specify the resource development stage and swagger info. Update the lambda resource and have it reference to the APIGateway resource.
+
+###### 5.3 re-deploy the CloudFormation stack
+
+```
+./deploy.sh
+```
+
+Check if the APIGateway is updated.
