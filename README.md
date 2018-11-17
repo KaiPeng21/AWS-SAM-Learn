@@ -96,10 +96,21 @@ Check if the CloudFormation stack is updated.
 
 Add an APIGateway resource in **template.yaml**. Specify the resource development stage and swagger info. Update the lambda resource and have it reference to the APIGateway resource.
 
-###### 5.3 re-deploy the CloudFormation stack
+###### 6.2 re-deploy the CloudFormation stack
 
 ```
 ./deploy.sh
 ```
 
 Check if the APIGateway is updated.
+
+## STEP 7 - Add Binary Datatype support in API Gateway
+
+Update apigateway resource in **template.yaml**.
+
+###### 7.2 re-deploy the CloudFormation stack
+
+```
+./deploy.sh
+```
+

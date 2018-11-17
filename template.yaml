@@ -25,6 +25,8 @@ Resources:
                 uri:
                   !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${HelloLambda.Arn}/invocations
                 responses: {}
+        x-amazon-apigateway-binary-media-types:
+          - '*/*'
 
   HelloLambda:
     Type: AWS::Serverless::Function
